@@ -6,13 +6,19 @@ function App() {
   const [squares, setSquares] = useState(['','','','','','','','',''])
   const [player, setPlayer] = useState(true)
   return (
-    <div>
-      <Square 
-        squares={squares}
-        setSquares={setSquares}
-        player={player}
-        setPlayer={setPlayer}
-      ></Square>
+    <div className="app" >
+      <div className="container" >
+        {squares.map((val, index)=>{
+          return <Square
+          squares={squares}
+          setSquares={setSquares}
+          player={player}
+          setPlayer={setPlayer}
+          squareValue={val}
+          index = {index}
+          />
+        })}
+      </div>
     </div>
   );
 }
