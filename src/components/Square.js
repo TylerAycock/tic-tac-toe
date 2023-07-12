@@ -1,5 +1,10 @@
 const Square = (props) => {
-  return <div>{props.propVar}</div>;
+
+  console.log(props.squares, props.player)
+
+  return <div>
+  
+  </div>;
 };
 
 export default Square;
