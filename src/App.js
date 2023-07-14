@@ -28,13 +28,12 @@ function App() {
       if (
         squares[a] &&
         squares[a] === squares[b] &&
-        squares[b] === squares[c]
+        squares[a] === squares[c]
       ) {
         return `${squares[a]} won!`;
-      } else {
-        return "Who will win?";
       }
     }
+      return 'Who will win?'
   };
 
   return (
@@ -45,6 +44,7 @@ function App() {
           // console.log('sending', <Square/>)
           return (
             <Square
+              key={Math.random() }
               squares={squares}
               setSquares={setSquares}
               player={player}
